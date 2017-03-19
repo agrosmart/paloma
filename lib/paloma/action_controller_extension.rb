@@ -33,7 +33,7 @@ module Paloma
         scope[:only] = options[:only] if options[:only]
         scope[:except] = options[:except] if options[:except]
 
-        self.before_filter(
+        self.before_action(
           Proc.new {
             self.js path_or_options, options[:params]
           },
